@@ -1,0 +1,132 @@
+/* --- 全体・メイン画面用の設定 --- */
+body {
+    background-color: #F0F4F9;
+    font-family: Arial, Helvetica, sans-serif;
+    /* flex設定を削除し、通常の縦並びにします */
+    display: block; 
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    width: 40%;
+    font-size: 30px;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px auto;
+    background-color: white;
+    line-height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+.marketingimg {
+    width: 450px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+#input-area {
+    margin: 20px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 画面が狭い時に折り返す設定 */
+}
+
+.service, .brand, .target {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    padding: 25px;
+    min-width: 380px; /* 横幅を安定させる */
+}
+
+.brand {
+    margin: 0 20px;
+}
+
+.about-service, .about-brand, .about-target {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input {
+    width: 350px;
+    display: block;
+    padding: 20px 10px;
+    margin: 10px 10px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.button-area {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-area button {
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: 19%; /* 5つ並ぶので少し狭める */
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 5px;
+    background-color: #F0F4F9;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-area button:hover {
+    background-color: cornflowerblue;
+    color: white;
+    border-color: cornflowerblue;
+}
+
+#makeprompt {
+   background-color: orange !important;
+   color: white !important;
+   border-color: white !important;
+}
+
+.prompt-area {
+    width: 50%;
+    margin: 30px auto;
+    padding: 15px;
+    border: 2px solid #555;
+    border-radius: 20px;
+    background-color: white;
+}
+
+/* --- ログイン画面専用（ここを body ではなく .login-body に変更） --- */
+.login-body {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    background-color: #F0F4F9;
+}
+
+#auth-container {
+    background-color: #ffffff;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    width: 300px;  
+    text-align: center;
+}
+
+#auth-container input {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
