@@ -85,6 +85,29 @@ $login_uid = $_SESSION['uid'];
         </div>
 
 
+        <div id="chat-widget">
+          <div id="chat-header">マーケティング・プロンプトメーカー</div>
+          <div id="chat-body">
+              <textarea name="consult_text" id="consult_text" placeholder="施策の壁打ち内容を入力..."></textarea>
+          </div>
+          <div id="chat-footer">
+              <button type="button" id="btn-consult">AIに相談する</button>
+              
+              <form action="insert.php" method="POST" style="display:inline;">
+                  <input type="hidden" name="content" id="hidden_content">
+                  <button type="submit" id="btn-request">確認依頼をする</button>
+              </form>
+          </div>
+      </div>
+
+      <script>
+          // テキストエリアの内容を、送信用のhidden inputに同期させる
+          document.getElementById('consult_text').addEventListener('input', function() {
+              document.getElementById('hidden_content').value = this.value;
+          });
+      </script>
+  
+
     <script src="../js/jquery-2.1.3.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
